@@ -7,6 +7,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('main.home');
+})->name('home');
+
+Route::get('/umkm', function () {
+    return view('main.umkm');
+})->name('umkm');
+
+Route::get('/tentang', function () {
+    return view('main.tentang');
+})->name('tentang');
+
+Route::get('/berita', function () {
+    return view('main.berita');
+})->name('berita');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
